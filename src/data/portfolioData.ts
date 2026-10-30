@@ -279,10 +279,10 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     title: 'Langages de Programmation',
     description: 'Maitrise approfondie des langages de programmation, de script et de structuration web.',
     skills: [
-      { name: 'Python', level: 85, experienceYear: '3 ans', isPrimary: true },
-      { name: 'PHP', level: 88, experienceYear: '3+ ans', isPrimary: true },
-      { name: 'JavaScript (ES6+)', level: 95, experienceYear: '4+ ans', isPrimary: true },
-      { name: 'TypeScript', level: 88, experienceYear: '2+ ans', isPrimary: true },
+      { name: 'PHP', level: 68, experienceYear: '3+ ans', isPrimary: true },
+      { name: 'Python', level: 65, experienceYear: '3 ans', isPrimary: true },
+      { name: 'JavaScript (ES6+)', level: 72, experienceYear: '4+ ans', isPrimary: true },
+      { name: 'TypeScript', level: 69, experienceYear: '2+ ans', isPrimary: true },
       { name: 'JSX', level: 92, experienceYear: '3 ans', isPrimary: true },
       { name: 'SQL & Modélisation', level: 86, experienceYear: '4 ans', isPrimary: true },
       { name: 'HTML5 & CSS3', level: 98, experienceYear: '5 ans' }

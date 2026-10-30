@@ -57,8 +57,8 @@ export const PERSONAL_INFO = {
   phones: ['+229 01 94 83 88 93', '+229 01 97 01 95 75'],
   whatsapp: '2290194838893',
   cvPath: '/assets/aistudio/Mon_CV_Calleb_ADIBO_09-2026_1f3efa35.pdf',
-  portraitImage: '/src/assets/images/calleb_cv_photo.jpg',
-  studioImage: '/src/assets/images/calleb_adibo_portrait_1793386762758.jpg',
+  portraitImage: '/images/calleb_cv_photo.jpg',
+  studioImage: '/images/calleb_adibo_portrait_1793386762758.jpg',
   availableForHire: true,
   stats: [
     { label: "Années d'Expérience & Stages", value: '4+' },
@@ -77,7 +77,7 @@ export const PROJECTS: Project[] = [
     role: 'Développeur Logiciel Principal',
     period: '2025 – 2026',
     client: 'Agence Nationale de Météorologie (METEO-BENIN)',
-    image: '/src/assets/images/synop_official_capture.png',
+    image: '/images/synop_official_capture.png',
     description: "Système informatique critique conçu pour l’Agence Nationale de Météorologie du Bénin (METEO-BENIN). Il assure la surveillance globale, la collecte, le décodage et l'analyse de ponctualité des télégrammes météorologiques SYNOP transmis par les stations nationales (Stations DMZ) selon les normes de l'OMM.",
     tags: ['React.js', 'Node.js', 'Express', 'TypeScript', 'Supervision Métier', 'Tableau de Bord Météo'],
     highlights: [
@@ -96,7 +96,7 @@ export const PROJECTS: Project[] = [
     role: 'Webmaster & Développeur Web',
     period: '2024 – 2025',
     client: 'Prime News Monde (ex-Prime News TV Bénin)',
-    image: '/src/assets/images/primenews_official_capture.jpg',
+    image: '/images/primenews_official_capture.jpg',
     liveUrl: 'https://www.primenewsmonde.bj/',
     description: "Conception complète, structuration éditoriale et gestion quotidienne du portail d’information continue primenewsmonde.bj. Optimisation pour absorber les pics de trafic lors d’événements majeurs, intégration multimédia et référencement naturel avancé (SEO).",
     tags: ['React', 'WordPress', 'PHP', 'JavaScript', 'SEO & Core Web Vitals', 'Architecture Média'],
@@ -116,7 +116,7 @@ export const PROJECTS: Project[] = [
     role: 'Développeur Full-Stack',
     period: '2025 – 2026',
     client: 'METEO-BENIN',
-    image: '/src/assets/images/project_inventory_meteo_1793385458398.jpg',
+    image: '/images/project_inventory_meteo_1793385458398.jpg',
     description: "Application de gestion d'inventaire et de maintenance préventive pour le matériel de pointe météorologique (anémomètres, pluviomètres, baromètres de précision, capteurs solaires). Offre une traçabilité rigoureuse des mouvements entre le dépôt central et les stations régionales.",
     tags: ['React.js', 'Express', 'Node.js', 'SQL / Bases de données', 'Gestion de Parc', 'Traçabilité'],
     highlights: [
@@ -134,7 +134,7 @@ export const PROJECTS: Project[] = [
     category: 'E-Commerce',
     role: 'Développeur Full-Stack',
     period: '2024 – 2025',
-    image: '/src/assets/images/project_ecommerce_1793385458520.jpg',
+    image: '/images/project_ecommerce_1793385458520.jpg',
     description: "Solution e-commerce moderne pensée pour la conversion. Dotée d'un catalogue dynamique avec recherche instantanée et filtres facettés, d'un panier d'achat fluide géré côté client avec synchronisation API, et d'un tunnel de paiement intuitif.",
     tags: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'REST API', 'Architecture Micro-Composants'],
     highlights: [

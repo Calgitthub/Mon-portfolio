@@ -40,7 +40,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCVModal }) => {
 
             {/* Lead Copy */}
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
-              Je suis <span className="font-semibold text-slate-900 dark:text-white">Calleb ADIBO</span>, développeur Full-Stack (React, Node.js, PHP, Python) diplômé de l’IUT de Parakou et certifié en Développement Web No-Code (EIG-Bénin). Concepteur de solutions critiques pour l’<span className="font-medium text-slate-900 dark:text-white">Agence Nationale de Météorologie (METEO-BENIN)</span> et Webmaster du portail international d’informations <span className="font-medium text-slate-900 dark:text-white">Prime News Monde</span>.
+              Je suis <span className="font-semibold text-slate-900 dark:text-white">Calleb ADIBO</span>, développeur Full-Stack (React, Node.js, PHP, Python) diplômé de l’IUT de Parakou et certifié en Développement Web No-Code (EIG-Bénin). Participant à la onception de solutions critiques pour l’<span className="font-medium text-slate-900 dark:text-white">Agence Nationale de Météorologie (METEO-BENIN)</span> et Webmaster du portail international d’informations <span className="font-medium text-slate-900 dark:text-white">Prime News Monde</span>.
             </p>
 
             {/* Location & Quick Contact Badges */}

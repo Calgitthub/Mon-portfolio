@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Sun, Moon, FileText, Send, Download, Rocket } from 'lucide-react';
+import { Sun, Moon, FileText, Download } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 interface NavbarProps {
   darkMode: boolean;
   onToggleDarkMode: () => void;
   onOpenCVModal: () => void;
-  onOpenExportModal: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   darkMode,
   onToggleDarkMode,
   onOpenCVModal,
-  onOpenExportModal,
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -71,18 +69,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           ))}
         </nav>
 
-        {/* Zone 3: Actions (Export guide, Theme toggle, CV button) */}
+        {/* Zone 3: Actions (Theme toggle, CV button) */}
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-          {/* Guide Vercel / GitHub Pages */}
-          <button
-            onClick={onOpenExportModal}
-            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-slate-700 dark:text-slate-200 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 rounded-lg transition-colors whitespace-nowrap shrink-0"
-            title="Guide d'exportation Vercel & GitHub Pages"
-          >
-            <Rocket className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-            <span>Déploiement</span>
-          </button>
-
           {/* Theme Toggle */}
           <button
             type="button"
@@ -134,24 +122,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               {link.label}
             </a>
           ))}
-          <div className="pt-2 flex items-center gap-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenExportModal();
-              }}
-              className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-medium text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 rounded-lg"
-            >
-              <Rocket className="w-3.5 h-3.5 text-blue-600" />
-              Export Vercel / GitHub
-            </button>
+          <div className="pt-2">
             <a
               href={PERSONAL_INFO.cvPath}
               download="CV_Calleb_ADIBO.pdf"
-              className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-medium text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 rounded-lg"
+              className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2.5 text-xs font-medium text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 rounded-lg"
             >
               <Download className="w-3.5 h-3.5" />
-              Télécharger PDF
+              Télécharger CV (PDF)
             </a>
           </div>
         </div>

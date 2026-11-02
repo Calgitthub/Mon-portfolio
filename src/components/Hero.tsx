@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Download, Mail, Phone, MapPin, CheckCircle2 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
@@ -8,7 +8,6 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onOpenCVModal }) => {
-  const [selectedPhoto, setSelectedPhoto] = useState<'cv' | 'studio'>('cv');
   return (
     <section className="relative overflow-hidden pt-8 pb-16 md:pt-16 md:pb-24 border-b border-slate-200/60 dark:border-slate-800/60">
       {/* Subtle background glow */}
@@ -29,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCVModal }) => {
           >
             {/* Editorial Kicker */}
             <div className="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-blue-600 dark:text-blue-400">
-              <span>Ingénieur Logiciel & Webmaster</span>
+              <span>Webmaster & Graphiste</span>
               <span aria-hidden="true">·</span>
               <span>Bénin</span>
             </div>
@@ -41,7 +40,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCVModal }) => {
 
             {/* Lead Copy */}
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
-              Je suis <span className="font-semibold text-slate-900 dark:text-white">Calleb ADIBO</span>, développeur Full-Stack (React, Node.js, PHP, Python) diplômé de l’IUT de Parakou et certifié en Développement Web No-Code (EIG-Bénin). Concepteur de solutions critiques pour l’<span className="font-medium text-slate-900 dark:text-white">Agence Nationale de Météorologie (METEO-BENIN)</span> et Webmaster du portail international <span className="font-medium text-slate-900 dark:text-white">Prime News Monde</span>.
+              Je suis <span className="font-semibold text-slate-900 dark:text-white">Calleb ADIBO</span>, développeur Full-Stack (React, Node.js, PHP, Python) diplômé de l’IUT de Parakou et certifié en Développement Web No-Code (EIG-Bénin). Concepteur de solutions critiques pour l’<span className="font-medium text-slate-900 dark:text-white">Agence Nationale de Météorologie (METEO-BENIN)</span> et Webmaster du portail international d’informations <span className="font-medium text-slate-900 dark:text-white">Prime News Monde</span>.
             </p>
 
             {/* Location & Quick Contact Badges */}
@@ -105,42 +104,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCVModal }) => {
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-sky-400 rounded-3xl rotate-1 opacity-20 filter blur-xs" />
 
               <div className="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-4 sm:p-5 shadow-lg">
-                {/* Photo Mode Switcher */}
-                <div className="flex items-center justify-between pb-3 text-xs">
-                  <span className="font-semibold text-slate-800 dark:text-slate-200">
-                    Portrait officiel
-                  </span>
-                  <div className="flex items-center gap-1 p-0.5 bg-slate-100 dark:bg-slate-800 rounded-lg">
-                    <button
-                      type="button"
-                      onClick={() => setSelectedPhoto('cv')}
-                      className={`px-2.5 py-1 text-[11px] font-medium rounded-md transition-all ${
-                        selectedPhoto === 'cv'
-                          ? 'bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-2xs font-semibold'
-                          : 'text-slate-500 hover:text-slate-900 dark:hover:text-white'
-                      }`}
-                    >
-                      Photo du CV
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setSelectedPhoto('studio')}
-                      className={`px-2.5 py-1 text-[11px] font-medium rounded-md transition-all ${
-                        selectedPhoto === 'studio'
-                          ? 'bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-2xs font-semibold'
-                          : 'text-slate-500 hover:text-slate-900 dark:hover:text-white'
-                      }`}
-                    >
-                      Studio HD
-                    </button>
-                  </div>
-                </div>
-
                 <div className="aspect-square w-full rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 relative">
                   <img
-                    src={selectedPhoto === 'cv' ? PERSONAL_INFO.portraitImage : PERSONAL_INFO.studioImage}
+                    src={PERSONAL_INFO.portraitImage}
                     alt="Calleb ADIBO - Ingénieur Logiciel & Webmaster"
-                    className="w-full h-full object-cover object-center transition-all duration-300"
+                    className="w-full h-full object-cover object-center"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent" />
@@ -149,7 +117,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCVModal }) => {
                   <div className="absolute bottom-3 left-3 right-3 text-white">
                     <div className="text-xs font-semibold">Calleb ADIBO</div>
                     <div className="text-[11px] text-slate-200 font-mono">
-                      {selectedPhoto === 'cv' ? 'Photo originale extraite du CV' : 'Version Studio HD'} · IUT Parakou (Licence)
+                      Photo officielle du CV · IUT Parakou (Licence)
                     </div>
                   </div>
                 </div>

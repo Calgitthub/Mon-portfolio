@@ -8,7 +8,6 @@ import { ExperienceTimeline } from './components/ExperienceTimeline';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { CVViewerModal } from './components/CVViewerModal';
-import { DeploymentModal } from './components/DeploymentModal';
 import { Project } from './data/portfolioData';
 
 export default function App() {
@@ -23,7 +22,6 @@ export default function App() {
 
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isCVModalOpen, setIsCVModalOpen] = useState<boolean>(false);
-  const [isExportModalOpen, setIsExportModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -47,7 +45,6 @@ export default function App() {
         darkMode={darkMode}
         onToggleDarkMode={toggleDarkMode}
         onOpenCVModal={() => setIsCVModalOpen(true)}
-        onOpenExportModal={() => setIsExportModalOpen(true)}
       />
 
       {/* Main Content */}
@@ -62,7 +59,6 @@ export default function App() {
       {/* Footer */}
       <Footer
         onOpenCVModal={() => setIsCVModalOpen(true)}
-        onOpenExportModal={() => setIsExportModalOpen(true)}
       />
 
       {/* Interactive Modals */}
@@ -74,11 +70,6 @@ export default function App() {
       <CVViewerModal
         isOpen={isCVModalOpen}
         onClose={() => setIsCVModalOpen(false)}
-      />
-
-      <DeploymentModal
-        isOpen={isExportModalOpen}
-        onClose={() => setIsExportModalOpen(false)}
       />
     </div>
   );

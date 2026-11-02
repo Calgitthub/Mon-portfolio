@@ -1,13 +1,12 @@
 import React from 'react';
-import { ArrowUp, Heart, FileText, Rocket } from 'lucide-react';
+import { ArrowUp, FileText } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 interface FooterProps {
   onOpenCVModal: () => void;
-  onOpenExportModal: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenCVModal, onOpenExportModal }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenCVModal }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -46,13 +45,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenCVModal, onOpenExportModal
             >
               <FileText className="w-3 h-3" />
               <span>Curriculum Vitae</span>
-            </button>
-            <button
-              onClick={onOpenExportModal}
-              className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors inline-flex items-center gap-1"
-            >
-              <Rocket className="w-3 h-3" />
-              <span>Déploiement Vercel / GitHub</span>
             </button>
           </div>
 

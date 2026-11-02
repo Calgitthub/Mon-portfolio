@@ -58,7 +58,6 @@ export const PERSONAL_INFO = {
   whatsapp: '2290194838893',
   cvPath: '/assets/aistudio/Mon_CV_Calleb_ADIBO_09-2026_1f3efa35.pdf',
   portraitImage: '/images/calleb_cv_photo.jpg',
-  studioImage: '/images/calleb_adibo_portrait_1793386762758.jpg',
   availableForHire: true,
   stats: [
     { label: "Années d'Expérience & Stages", value: '4+' },
